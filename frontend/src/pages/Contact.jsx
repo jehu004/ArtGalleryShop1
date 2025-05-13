@@ -81,9 +81,10 @@ function ContactForm() {
           name="email"
           required
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={e => setEmail(sanitizeInput(e.target.value))}
           maxLength={254}
           pattern="[A-Za-z\.,\-@!? ]+"
+          title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -94,9 +95,10 @@ function ContactForm() {
           rows="5"
           required
           value={message}
-          onChange={e => setMessage(e.target.value)}
+          onChange={e => setMessage(sanitizeInput(e.target.value))}
           maxLength={1000}
           pattern="[A-Za-z\.,\-@!? ]+"
+          title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
         <ValidationError prefix="Message" field="message" errors={state.errors} />
 

@@ -83,6 +83,7 @@ function ContactForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           maxLength={254}
+          pattern="[A-Za-z\.,\-@!? ]+"
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -95,6 +96,7 @@ function ContactForm() {
           value={message}
           onChange={e => setMessage(e.target.value)}
           maxLength={1000}
+          pattern="[A-Za-z\.,\-@!? ]+"
         />
         <ValidationError prefix="Message" field="message" errors={state.errors} />
 
@@ -105,6 +107,7 @@ function ContactForm() {
           style={{ display: 'none' }}
           tabIndex="-1"
           autoComplete="off"
+          pattern="[A-Za-z\.,\-@!? ]+"
         />
 
         <button type="submit" disabled={state.submitting}>

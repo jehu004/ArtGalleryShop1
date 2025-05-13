@@ -83,6 +83,7 @@ const AdminDashboard = () => {
               <span className="block w-0 h-[2px] bg-[#AAAAAA] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
+          <li><a href="#" className="hover:text-[#FFD700]">Log Out</a></li>
         </ul>
       </nav>
 

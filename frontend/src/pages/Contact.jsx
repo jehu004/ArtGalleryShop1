@@ -7,6 +7,8 @@ import.meta.env.VITE_API_URL;
 
 // Helper to strip CR/LF to prevent header injection
 const stripNewlines = s => s.replace(/[\r\n]+/g, ' ');
+// Regex to allow only letters and . , - @ ! ?
+const sanitizeInput = value => value.replace(/[^a-zA-Z\.\,\-@!?]/g, '');
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xrbpjnkl");
@@ -53,10 +55,10 @@ function ContactForm() {
           name="name"
           required
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={e => setName(sanitizeInput(e.target.value))}
           maxLength={200}
-          pattern="[^\r\n]*"
-          title="Please avoid line breaks"
+          pattern="[A-Za-z\.,\-@!? ]+"
+          title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
 
         <label htmlFor="subject">Subject</label>
@@ -66,10 +68,10 @@ function ContactForm() {
           name="subject"
           required
           value={subject}
-          onChange={e => setSubject(e.target.value)}
+          onChange={e => setSubject(sanitizeInput(e.target.value))}
           maxLength={200}
-          pattern="[^\r\n]*"
-          title="Please avoid line breaks"
+          pattern="[A-Za-z\.,\-@!? ]+"
+          title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
 
         <label htmlFor="email">Email Address</label>

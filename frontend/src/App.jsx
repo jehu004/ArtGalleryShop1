@@ -14,7 +14,6 @@ import AdminProducts     from "./pages/AdminProducts";
 import AdminOrderHistory from "./pages/AdminOrderHistory";
 import AdminArtists      from "./pages/AdminArtists";
 import Shop              from "./pages/Shop";
-import Home              from "./pages/Home";
 import Artists           from "./pages/Artists";
 import OrderSummary      from "./pages/OrderSummary";
 import ContactPage       from "./pages/Contact";
@@ -72,7 +71,7 @@ export default function App() {
         </Route>
 
         {/* ---------- PUBLIC ---------- */}
-        <Route path="/"              element={<Home />} />
+        <Route path="/"              element={<Shop />} />
         <Route path="/shop"          element={<Shop />} />
         <Route path="/artists"       element={<Artists />} />
         <Route path="/artists/:id"   element={<ArtistPage />} />

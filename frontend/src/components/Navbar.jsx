@@ -9,9 +9,9 @@ const Navbar = () => {
       </div>
 
       <nav className="navbar">
-        <Link to="/">Home</Link>
         <Link to="/shop">Shop</Link>
         <Link to="/artists">Artists</Link>
+        <Link to="/contact">Contact</Link>
         <a
           href="https://www.galleriedwin.com/"
           target="_blank"
@@ -19,7 +19,7 @@ const Navbar = () => {
         >
           Gallery
         </a>
-        <Link to="/contact">Contact</Link>
+        
       </nav>
     </header>
   );

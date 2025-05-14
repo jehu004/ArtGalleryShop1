@@ -42,7 +42,7 @@ router.post("/create-checkout-session", async (req, res) => {
       })),
       shipping_address_collection: {
         allowed_countries: [
-         "SE", "DK", "FR"
+         "SE", "DK", "FR", "NO"
         ]
       },
 

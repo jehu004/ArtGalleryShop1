@@ -11,7 +11,7 @@ const AdminOrderHistory = () => {
   const [sortDirection, setSortDirection] = useState("desc");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/orders")
+    fetch(`${API_BASE_URL}/api/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data))
       .catch((error) => console.error("Error fetching order history:", error));
@@ -29,7 +29,7 @@ const AdminOrderHistory = () => {
 
   const updateOrderStatus = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${selectedOrder._id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/orders/${selectedOrder._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

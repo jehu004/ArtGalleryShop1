@@ -11,7 +11,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     // Fetch items
-    fetch("http://localhost:5000/api/items")
+    fetch(`${API_BASE_URL}/api/items`)
       .then((res) => res.json())
       .then((data) => {
         setStats((prev) => ({ ...prev, items: data.length }));
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
       .catch((error) => console.error("Error fetching items:", error));
 
     // Fetch artists
-    fetch("http://localhost:5000/api/artists")
+    fetch(`${API_BASE_URL}/api/artists`)
       .then((res) => res.json())
       .then((data) => {
         setStats((prev) => ({ ...prev, artists: data.length }));
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
       .catch((error) => console.error("Error fetching artists:", error));
 
     // Fetch orders
-    fetch("http://localhost:5000/api/orders")
+    fetch(`${API_BASE_URL}/api/orders`)
       .then((res) => res.json())
       .then((data) => {
         setStats((prev) => ({ ...prev, orders: data.length }));

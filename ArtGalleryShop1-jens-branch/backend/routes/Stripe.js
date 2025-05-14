@@ -4,6 +4,13 @@ const Stripe  = require("stripe");
 const stripe  = Stripe(process.env.STRIPE_SECRET_KEY);
 
 const DOMAIN = process.env.FRONTEND_URL || "http://localhost:5173";
+console.log("✅ Allowed countries:", [
+  "AL", "AD", "AM", "AT", "AZ", "BY", "BE", "BA", "BG", "HR", "CY", "CZ",
+  "DK", "EE", "FI", "FR", "GE", "DE", "GR", "HU", "IS", "IE", "IT", "KZ",
+  "XK", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "NL", "MK", "NO",
+  "PL", "PT", "RO", "RU", "SM", "RS", "SK", "SI", "ES", "SE", "CH", "TR",
+  "UA", "GB", "VA"
+]);
 
 // ✅ Create a Stripe Checkout Session
 router.post("/create-checkout-session", async (req, res) => {

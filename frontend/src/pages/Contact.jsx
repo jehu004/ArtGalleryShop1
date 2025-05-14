@@ -8,7 +8,7 @@ import.meta.env.VITE_API_URL;
 // Helper to strip CR/LF to prevent header injection
 const stripNewlines = s => s.replace(/[\r\n]+/g, ' ');
 // Regex to allow only letters and . , - @ ! ?
-const sanitizeInput = value => value.replace(/[^a-zA-Z\.\,\-@!?]/g, '');
+const sanitizeInput = value => value.replace(/[^a-zA-Z\.\,\-@!? ]/g, '');
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xrbpjnkl");

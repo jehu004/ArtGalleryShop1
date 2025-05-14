@@ -25,7 +25,8 @@ router.post("/create-checkout-session", async (req, res) => {
   // JSON → string → percent‑encode for URL safety
   const cartJson  = JSON.stringify(simplified);
   const cartParam = encodeURIComponent(cartJson);
-
+  
+  console.log("✅ DOMAIN used for Stripe redirect:", DOMAIN);
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],

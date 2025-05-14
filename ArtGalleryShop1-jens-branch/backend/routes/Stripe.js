@@ -39,7 +39,15 @@ router.post("/create-checkout-session", async (req, res) => {
         },
         quantity: item.quantity,
       })),
-      shipping_address_collection: { allowed_countries: ["NO"] },
+      shipping_address_collection: {
+        allowed_countries: [
+          "AL", "AD", "AM", "AT", "AZ", "BY", "BE", "BA", "BG", "HR", "CY", "CZ",
+          "DK", "EE", "FI", "FR", "GE", "DE", "GR", "HU", "IS", "IE", "IT", "KZ",
+          "XK", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "NL", "MK", "NO",
+          "PL", "PT", "RO", "RU", "SM", "RS", "SK", "SI", "ES", "SE", "CH", "TR",
+          "UA", "GB", "VA"
+        ]
+      },
 
       // still save the full cart JSON in metadata if you need it server‑side
       metadata: { cart: cartJson },

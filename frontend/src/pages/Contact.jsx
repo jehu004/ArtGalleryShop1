@@ -8,7 +8,8 @@ import.meta.env.VITE_API_URL;
 // Helper to strip CR/LF to prevent header injection
 const stripNewlines = s => s.replace(/[\r\n]+/g, ' ');
 // Regex to allow only letters and . , - @ ! ?
-const sanitizeInput = value => value.replace(/[^a-zA-Z\.\,\-@!? ]/g, '');
+const sanitizeInput = value => value.replace(/[^a-zA-Z0-9\.\,\-@!? ]/g, '');
+
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xrbpjnkl");
@@ -57,7 +58,7 @@ function ContactForm() {
           value={name}
           onChange={e => setName(sanitizeInput(e.target.value))}
           maxLength={200}
-          pattern="[A-Za-z\.,\-@!? ]+"
+          pattern="[A-Za-z0-9\.,\-@!? ]+"
           title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
 
@@ -70,7 +71,7 @@ function ContactForm() {
           value={subject}
           onChange={e => setSubject(sanitizeInput(e.target.value))}
           maxLength={200}
-          pattern="[A-Za-z\.,\-@!? ]+"
+          pattern="[A-Za-z0-9\.,\-@!? ]+"
           title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
 
@@ -83,7 +84,7 @@ function ContactForm() {
           value={email}
           onChange={e => setEmail(sanitizeInput(e.target.value))}
           maxLength={254}
-          pattern="[A-Za-z\.,\-@!? ]+"
+          pattern="[A-Za-z0-9\.,\-@!? ]+"
           title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -97,7 +98,7 @@ function ContactForm() {
           value={message}
           onChange={e => setMessage(sanitizeInput(e.target.value))}
           maxLength={1000}
-          pattern="[A-Za-z\.,\-@!? ]+"
+          pattern="[A-Za-z0-9\.,\-@!? ]+"
           title="Only letters, spaces, and . , - @ ! ? are allowed."
         />
         <ValidationError prefix="Message" field="message" errors={state.errors} />

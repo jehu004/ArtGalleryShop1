@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import API_BASE_URL from '../apiConfig';
 
 const AdminOrderHistory = () => {
   const [orders, setOrders] = useState([]);

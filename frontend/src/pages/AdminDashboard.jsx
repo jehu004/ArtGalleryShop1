@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import API_BASE_URL from '../apiConfig';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({ items: 0, orders: 0, artists: 0 });

@@ -166,7 +166,7 @@ const AdminProducts = () => {
     if (!confirmDelete) return;
 
     try {
-        const res = await fetch(`http://localhost:5000/api/categories/${selectedCategoryToDelete}`, {
+        const res = await fetch(`${API_BASE_URL}/api/categories/${selectedCategoryToDelete}`, {
             method: "DELETE",
         });
 

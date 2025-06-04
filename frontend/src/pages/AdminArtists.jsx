@@ -214,11 +214,11 @@ const AdminArtists = () => {
 
             <div className="flex justify-between mt-4">
               <button
-                className="bg-[#FFD700] hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 mr-2"
+                className="bg-[#FFD700] cursor-pointer hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 mr-2"
                 onClick={handleSubmit}
               >Legg til</button>
               <button
-                className="bg-[#FFD700] hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 ml-2"
+                className="bg-[#FFD700] cursor-pointer hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 ml-2"
                 onClick={() => setIsModalOpen(false)}
               >Avbryt</button>
             </div>
@@ -291,11 +291,11 @@ const AdminArtists = () => {
 
             <div className="flex justify-between mt-4">
               <button
-                className="bg-[#FFD700] hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 mr-2"
+                className="bg-[#FFD700] cursor-pointer hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 mr-2"
                 onClick={handleUpdate}
               >Lagre</button>
               <button
-                className="bg-[#FFD700] hover:bg-[#ffbb00] text-black px-4 py-2 rounded-lg font-semibold w-1/2 ml-2"
+                className="bg-[#FFD700] hover:bg-[#ffbb00] cursor-pointer text-black px-4 py-2 rounded-lg font-semibold w-1/2 ml-2"
                 onClick={() => setSelectedArtist(null)}
               >Avbryt</button>
             </div>

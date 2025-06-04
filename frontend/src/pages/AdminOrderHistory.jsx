@@ -123,7 +123,7 @@ const AdminOrderHistory = () => {
           <li className="relative group"><a href="/admin/order-history" className="text-[#FFD700] hover:text-[#FFD700] transition">Orders</a></li>
           <li className="relative group"><a href="/admin/products" className="text-[#F5F5F5] hover:text-[#FFD700] transition">Products</a></li>
           <li className="relative group"><a href="/admin/artists" className="text-[#F5F5F5] hover:text-[#FFD700] transition">Artists</a></li>
-          <li><a href="#" className="hover:text-[#FFD700]">Log Out</a></li>
+          <li><a href="/login" className="hover:text-[#FFD700]">Log Out</a></li>
         </ul>
       </nav>
 

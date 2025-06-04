@@ -280,7 +280,7 @@ const AdminProducts = () => {
                         >
                             &times;
                         </button>
-                        <h2 className="text-xl font-semibold text-white mb-4 text-center">Slett kategori</h2>
+                        <h2 className="text-xl font-semibold text-white mb-4 text-center cursor-pointer">Slett kategori</h2>
                         <select
                             className="w-full p-2 mb-4 bg-[#1A1A1A] text-white rounded border border-gray-600 focus:border-[#FFD700] outline-none"
                             value={selectedCategoryToDelete}
